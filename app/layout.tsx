@@ -25,9 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen`}
       >
         {children}
+        <footer className="fixed bottom-2 w-full text-center text-[10px] text-gray-400/50 pointer-events-none z-50">
+          Anonymous interaction events are recorded for fun analytics. No PII collected.
+        </footer>
       </body>
     </html>
   );
